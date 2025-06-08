@@ -1,0 +1,27 @@
+// DemoNumInputBox - 数字入力用のBoxを２つ作成
+const DemoNumInputBox = ({ num1, num2, setNum1, setNum2 }) => {
+  return (
+    <div className="input-container">
+      <div className="input-group">
+        <label className="input-label">数字1:</label>
+        <input
+          type="number"
+          value={num1}
+          onChange={(e) => setNum1(e.target.value)}
+          placeholder="最初の数字"
+          className="number-input"
+        />
+      </div>
+      <div className="input-group">
+        <label className="input-label">数字2:</label>
+        <input
+          type="number"
+          value={num2}
+          onChange={(e) => setNum2(e.target.value)}
+          placeholder="二番目の数字"
+          className="number-input"
+        />
+      </div>
+    </div>
+  );
+};
